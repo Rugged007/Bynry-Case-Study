@@ -4,7 +4,7 @@ export const mockProfiles: Profile[] = [
   {
     id: '1',
     name: 'Rugved Taru',
-    photo: 'https://via.placeholder.com/150',
+    photo: 'https://randomuser.me/api/portraits/men/1.jpg',
     description: 'Software Engineer',
     address: {
       street: 'Kothrud',
@@ -25,8 +25,8 @@ export const mockProfiles: Profile[] = [
   {
     id: '2',
     name: 'Parth Joshi',
-    photo: 'https://via.placeholder.com/150',
-    description: 'UX Designer ',
+    photo: 'https://randomuser.me/api/portraits/men/2.jpg',
+    description: 'UX Designer',
     address: {
       street: 'katraj',
       city: 'Pune',
@@ -38,71 +38,71 @@ export const mockProfiles: Profile[] = [
       }
     },
     contactInfo: {
-      email: 'Parth@example.com',
+      email: 'parth@example.com',
       phone: '+91 234 567 8901'
     },
     interests: ['Design', 'Art', 'User Experience']
   },
   {
     id: '3',
-    name: 'Tejas Joshi',
-    photo: 'https://via.placeholder.com/150',
-    description: 'UX Designer ',
+    name: 'Tejas Bhat',
+    photo: 'https://randomuser.me/api/portraits/men/3.jpg',
+    description: 'Production Head',
     address: {
-      street: 'katraj',
+      street: 'POLYHUB FOODCOURT',
       city: 'Pune',
       state: 'MH',
       country: 'India',
       coordinates: {
-        lat: 18.448168,
-        lng: 73.858549
+        lat: 18.594016,
+        lng: 73.927536
       }
     },
     contactInfo: {
-      email: 'Parth@example.com',
-      phone: '+91 234 567 8901'
+      email: 'tejas@example.com',
+      phone: '+91 234 567 8902'
     },
     interests: ['Design', 'Art', 'User Experience']
   },
   {
     id: '4',
-    name: 'Rohit Joshi',
-    photo: 'https://via.placeholder.com/150',
-    description: 'UX Designer ',
+    name: 'Rohit avhad',
+    photo: 'https://randomuser.me/api/portraits/men/4.jpg',
+    description: 'Graphic Designer',
     address: {
-      street: 'katraj',
+      street: 'Modern Engineering College Rd',
       city: 'Pune',
       state: 'MH',
       country: 'India',
       coordinates: {
-        lat: 18.448168,
-        lng: 73.858549
+        lat: 18.526761,
+        lng: 73.842189
       }
     },
     contactInfo: {
-      email: 'Parth@example.com',
-      phone: '+91 234 567 8901'
+      email: 'rohit@example.com',
+      phone: '+91 234 567 8903'
     },
     interests: ['Design', 'Art', 'User Experience']
   },
   {
     id: '5',
-    name: 'Hemant Joshi',
-    photo: 'https://via.placeholder.com/150',
-    description: 'UX Designer ',
+    name: 'Hemant munot',
+    photo: 'https://randomuser.me/api/portraits/men/5.jpg',
+    description: 'UX Designer',
     address: {
-      street: 'katraj',
+      street: 'Laxmi Rd',
       city: 'Pune',
       state: 'MH',
       country: 'India',
       coordinates: {
-        lat: 18.448168,
-        lng: 73.858549
+        lat: 18.515686,
+        lng: 73.856420
       }
     },
     contactInfo: {
-      email: 'Parth@example.com',
-      phone: '+91 234 567 8901'
+      email: 'hemant@example.com',
+      phone: '+91 234 567 8904'
     },
     interests: ['Design', 'Art', 'User Experience']
   }

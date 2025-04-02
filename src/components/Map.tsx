@@ -1,6 +1,8 @@
 import React from 'react';
-import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
+import { GoogleMap, Marker } from '@react-google-maps/api';
 import { Profile } from '../types/Profile';
+import { Box } from '@mui/material';
+import { defaultMapConfig } from '../config';
 
 interface MapProps {
   profiles: Profile[];
@@ -10,31 +12,36 @@ interface MapProps {
 
 const containerStyle = {
   width: '100%',
-  height: '400px'
+  height: '400px',
+  position: 'relative' as const
 };
 
-const defaultCenter = {
-  lat: 40.7128,
-  lng: -74.0060
+const mapOptions = {
+  disableDefaultUI: false,
+  zoomControl: true,
+  scrollwheel: true,
+  streetViewControl: true,
+  mapTypeControl: true
 };
 
 export const Map = ({ profiles, selectedProfile, onProfileSelect }: MapProps) => {
   return (
-    <LoadScript googleMapsApiKey="AIzaSyDX-9MDv_I-7gHVCWwfJFFl4U71gQgZz-8">
+    <Box sx={{ position: 'relative', height: '400px' }}>
       <GoogleMap
         mapContainerStyle={containerStyle}
-        center={selectedProfile ? selectedProfile.address.coordinates : defaultCenter}
-        zoom={selectedProfile ? 12 : 4}
+        center={selectedProfile?.address.coordinates || defaultMapConfig.defaultCenter}
+        zoom={selectedProfile ? 15 : defaultMapConfig.defaultZoom}
+        options={mapOptions}
       >
         {profiles.map((profile) => (
           <Marker
             key={profile.id}
             position={profile.address.coordinates}
             onClick={() => onProfileSelect?.(profile)}
-            animation={selectedProfile?.id === profile.id ? 1 : undefined}
+            animation={selectedProfile?.id === profile.id ? google.maps.Animation.BOUNCE : undefined}
           />
         ))}
       </GoogleMap>
-    </LoadScript>
+    </Box>
   );
 }; 
